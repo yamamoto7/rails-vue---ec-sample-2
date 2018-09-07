@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cross</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+  </head>
+
+  <body>
+    <div id="app">
+      <%= render 'layouts/header' %>
+      <%= render 'layouts/sidebar' %>
+      <div class="content-wrapper">
+        <router-view></router-view>
+      </div>
+      <hr>
+      <%= render 'layouts/footer' %>
+      <%= yield %>
+    </div>
+    <%= javascript_pack_tag 'application' %>
+  </body>
+</html>
